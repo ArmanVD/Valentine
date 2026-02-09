@@ -42,13 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Refresh ScrollTrigger positions after lazy images load
-  images.forEach((img) => {
-    if (!img.complete) {
-      img.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
-    }
-  });
-
   // Path 1: always visible, no animation
   const allPaths = Array.from(svgPaths);
   const pathsToAnimate = allPaths.slice(1);
