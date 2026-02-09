@@ -3,14 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Valentine</title>
+
+    <title>Valentine - A Special Question For You</title>
+    <meta
+      name="description"
+      content="A heartfelt Valentine's Day surprise with beautiful memories and a special question. Will you be my Valentine? Discover our special moments together in this romantic photo gallery."
+    />
+    <meta
+      name="keywords"
+      content="valentine, valentine's day, love, romance, will you be my valentine, romantic surprise, special question, photo gallery, memories"
+    />
+    <meta name="author" content="Arman" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://armanvd.github.io/Valentine/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://armanvd.github.io/Valentine/" />
+    <meta property="og:title" content="Valentine - A Special Question For You" />
+    <meta
+      property="og:description"
+      content="A heartfelt Valentine's Day surprise with beautiful memories and a special question. Will you be my Valentine?"
+    />
+    <meta property="og:image" content="https://armanvd.github.io/Valentine/assets/IMG_1780.webp" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://armanvd.github.io/Valentine/" />
+    <meta property="twitter:title" content="Valentine - A Special Question For You" />
+    <meta
+      property="twitter:description"
+      content="A heartfelt Valentine's Day surprise with beautiful memories and a special question. Will you be my Valentine?"
+    />
+    <meta property="twitter:image" content="https://armanvd.github.io/Valentine/assets/IMG_1780.webp" />
+
+    <meta name="theme-color" content="#800020" />
+
+    <link rel="preload" href="styles/styles.css" as="style" />
+    <link rel="modulepreload" href="javascript/script.js" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+          "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js"
+        }
+      }
+    </script>
+
     <link rel="stylesheet" href="styles/styles.css" />
     <script type="module" src="javascript/script.js"></script>
   </head>
   <body>
     <main>
-      <img src="/assets/IMG_1780.webp" alt="" width="387px" loading="lazy" />
-      <img src="/assets/IMG_2724.webp" alt="" width="387px" loading="lazy" />
+      <img src="/assets/IMG_1780.webp" alt="" width="387px" fetchpriority="high" />
+      <img src="/assets/IMG_2724.webp" alt="" width="387px" fetchpriority="high" />
       <img src="/assets/IMG_3239.webp" alt="" width="387px" loading="lazy" />
       <img src="/assets/IMG_3448.webp" alt="" width="387px" loading="lazy" />
       <img src="/assets/IMG_3848.webp" alt="" width="387px" loading="lazy" />
@@ -26,7 +71,11 @@
       <img src="/assets/IMG_3615.webp" alt="" width="387px" loading="lazy" />
       <img src="/assets/IMG_2837.webp" alt="" width="387px" loading="lazy" />
       <a href="/happy-me">Yes!</a>
-      <button>No!</button>
+      <button id="no-btn" popovertarget="no-popover">No!</button>
+      <div id="no-popover" popover="manual">
+        <p>Dat is gemeen, jouw recht tot kiezen wordt je nu ontnomen.</p>
+        <span id="no-timer">5</span>
+      </div>
       <svg width="430" height="15431" viewBox="0 0 430 15431" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="430" height="15431" fill="#800020" />
         <path
