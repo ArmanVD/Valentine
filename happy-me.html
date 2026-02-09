@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YEEESSS!</title>
+    <meta name="theme-color" content="#800020" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        background-color: #800020;
+        overflow: hidden;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 24px;
+        z-index: 1;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Yeeesssssss very period sexini mimini</h1>
+
+    <script>
+      // Continuous confetti and fireworks
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      // Confetti burst every 800ms
+      setInterval(() => {
+        confetti({
+          particleCount: randomInRange(30, 60),
+          spread: randomInRange(50, 100),
+          origin: { x: randomInRange(0.2, 0.8), y: randomInRange(0.3, 0.7) },
+          colors: ['#ff69b4', '#ff1493', '#ffffff', '#00CED1', '#ffd700', '#ff6b6b'],
+          ticks: 200,
+          gravity: 0.8,
+          scalar: randomInRange(0.8, 1.4)
+        });
+      }, 800);
+
+      // Fireworks from bottom edges
+      setInterval(() => {
+        // Left side firework
+        confetti({
+          particleCount: randomInRange(40, 80),
+          angle: randomInRange(55, 80),
+          spread: randomInRange(40, 70),
+          origin: { x: 0, y: 1 },
+          colors: ['#ff69b4', '#ff1493', '#ffffff', '#ffd700'],
+          ticks: 300,
+          gravity: 1,
+          startVelocity: randomInRange(35, 55),
+          scalar: randomInRange(0.8, 1.2)
+        });
+
+        // Right side firework
+        confetti({
+          particleCount: randomInRange(40, 80),
+          angle: randomInRange(100, 125),
+          spread: randomInRange(40, 70),
+          origin: { x: 1, y: 1 },
+          colors: ['#00CED1', '#ffffff', '#ff6b6b', '#ffd700'],
+          ticks: 300,
+          gravity: 1,
+          startVelocity: randomInRange(35, 55),
+          scalar: randomInRange(0.8, 1.2)
+        });
+      }, 1500);
+
+      // Big center burst every 3s
+      setInterval(() => {
+        confetti({
+          particleCount: randomInRange(80, 120),
+          spread: 360,
+          origin: { x: 0.5, y: 0.4 },
+          colors: ['#ff69b4', '#ff1493', '#ffffff', '#00CED1', '#ffd700', '#ff6b6b'],
+          ticks: 300,
+          gravity: 0.6,
+          startVelocity: randomInRange(20, 45),
+          scalar: randomInRange(1, 1.6),
+          shapes: ['circle', 'square']
+        });
+      }, 3000);
+    </script>
+  </body>
+</html>
