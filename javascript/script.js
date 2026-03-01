@@ -3,8 +3,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.getElementById("no-link").hidden = true;
-document.getElementById("no-btn").hidden = false;
+if ("showPopover" in HTMLElement.prototype) {
+  document.getElementById("no-link").hidden = true;
+  document.getElementById("no-btn").hidden = false;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const svg = document.querySelector("svg");
