@@ -39,6 +39,7 @@ img {
   border-radius: 32px;
   position: relative;
   z-index: 2;
+  opacity: 1;
 }
 
 [hidden] {
