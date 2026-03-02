@@ -16,6 +16,8 @@ body {
   line-height: 1.6;
   position: relative;
   background-color: #800020;
+  max-width: 430px;
+  margin: 0 auto;
 }
 
 svg {
